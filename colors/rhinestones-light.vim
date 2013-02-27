@@ -8,15 +8,16 @@
 " URL: https://github.com/HarnoRanaivo/rhinestones-colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"" Init {{{
 set background=light
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
 let colors_name="rhinestones-light"
+"}}}
 
-
-"" Interface colours
+"" Interface colours {{{
 hi Cursor       guifg=#eeeeee guibg=#c6c6c6 gui=none   ctermfg=255  ctermbg=251  cterm=none  
 hi Title        guifg=#dadada guibg=NONE    gui=bold   ctermfg=253  ctermbg=NONE cterm=bold 
 hi Normal       guifg=#121212 guibg=#eeeeee gui=none   ctermfg=233  ctermbg=255  cterm=none  
@@ -38,9 +39,9 @@ hi PmenuSel     guifg=#eeeeee guibg=#00afd7 gui=none   ctermfg=255  ctermbg=38  
 
 hi! link SpecialKey     NonText
 hi! link IncSearch      Search
+"}}}
 
-
-"" Syntax highlighting
+"" Syntax highlighting {{{
 hi Todo         guifg=#121212 guibg=NONE    gui=italic ctermfg=233 ctermbg=NONE cterm=none  
 hi Comment      guifg=#585858 guibg=NONE    gui=italic ctermfg=240 ctermbg=NONE cterm=none  
 hi Statement    guifg=#005f87 guibg=NONE    gui=none   ctermfg=24  ctermbg=NONE cterm=none  
@@ -62,9 +63,9 @@ hi! link Label          Statement
 hi! link Exception      Statement
 hi! link Conditional    Statement
 hi! link Operator       Statement
+"}}}
 
-
-""" User colours
+"" User colours {{{
 hi User1        guifg=#005f87 guibg=#d0d0d0 gui=italic ctermfg=24   ctermbg=252  cterm=none  
 hi User2        guifg=#5fafd7 guibg=#d0d0d0 gui=italic ctermfg=74   ctermbg=252  cterm=none  
 hi User3        guifg=#d78700 guibg=#d0d0d0 gui=italic ctermfg=172  ctermbg=252  cterm=none  
@@ -74,9 +75,16 @@ hi User5        guifg=#af0000 guibg=#d0d0d0 gui=italic ctermfg=124  ctermbg=252 
 "hi User7        guifg=#eeeeee guibg=#d0d0d0 gui=italic ctermfg=255  ctermbg=252  cterm=italic
 "hi User8        guifg=#eeeeee guibg=#d0d0d0 gui=italic ctermfg=255  ctermbg=252  cterm=italic
 "hi User9        guifg=#eeeeee guibg=#d0d0d0 gui=italic ctermfg=255  ctermbg=252  cterm=italic
+"}}}
 
+"" Diff mode {{{
+"hi DiffAdd      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi DiffChange   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi DiffDelete   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi DiffText     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"}}}
 
-" Specific colours for Vim >= 7.0
+" Specific colours for Vim >= 7.0 {{{
 if version >= 700
     hi CursorLine   guibg=#d0d0d0 ctermbg=252
     hi SpellBad     guisp=#af0000 ctermfg=124
@@ -86,3 +94,66 @@ if version >= 700
     hi! link SpellLocal      SpellBad
     hi! link SpellRare       SpellBad
 endif
+"}}}
+
+"" Specific colours for 'CtrlP' {{{
+" CtrlP buffer {{{
+"hi CtrlPNoEntries    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPMatch        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPLinePre      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPPrtBase      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPPrtText      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPPrtCursor    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"}}}
+
+" Extensions {{{
+"hi CtrlPTabExtra     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPBufName      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPTagKind      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPLineCol      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPUndoT        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPUndoBr       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPUndoNr       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPUndoSv       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPUndoPo       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPBookmark     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"}}}
+
+" Statuslines {{{
+"hi CtrlPMode1        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPMode2        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi CtrlPStats        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"}}}
+"}}}
+
+"" Specific colours for 'Tagbar' {{{
+"hi TagbarComment              guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarKind                 guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarNestedKind           guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarScope                guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarType                 guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarSignature            guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarPseudoID             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarFoldIcon             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarHighlight            guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarVisibilityPublic     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarVisibilityProtected  guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi TagbarVisibilityPrivate    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"}}}
+
+"" Specific colours for 'Gitv' {{{
+"hi! UndotreeNode             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeNodeCurrent      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeTimeStamp        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeFirstNode        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeBranch           guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeSeq              guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeCurrent          guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeNext             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeHead             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeHelp             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeHelpKey          guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeHelpTitle        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeSavedSmall       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"hi! UndotreeSavedBig         guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"}}}
