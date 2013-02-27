@@ -34,8 +34,8 @@ hi TabLineFill  guifg=#dadada guibg=#404040 gui=none   ctermfg=253  ctermbg=237 
 hi TabLineSel   guifg=#eeeeee guibg=#262626 gui=bold   ctermfg=255  ctermbg=235  cterm=bold  
 hi Pmenu        guifg=#a8a8a8 guibg=#404040 gui=none   ctermfg=248  ctermbg=237  cterm=none  
 hi PmenuSel     guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24   cterm=none  
-"hi PmenuSbar    guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24   cterm=none  
-"hi PmenuThumb   guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24   cterm=none  
+hi PmenuSbar    guifg=NONE    guibg=#121212 gui=none   ctermfg=NONE ctermbg=233  cterm=none  
+hi PmenuThumb   guifg=NONE    guibg=#a8a8a8 gui=none   ctermfg=NONE ctermbg=248  cterm=none  
 
 hi! link SpecialKey     NonText
 hi! link IncSearch      Search
@@ -71,7 +71,7 @@ hi User2        guifg=#a5f1f1 guibg=#404040 gui=none   ctermfg=159  ctermbg=237 
 hi User3        guifg=#d7af5f guibg=#404040 gui=none   ctermfg=179  ctermbg=237  cterm=none  
 hi User4        guifg=#87af00 guibg=#404040 gui=none   ctermfg=106  ctermbg=237  cterm=none  
 hi User5        guifg=#af0000 guibg=#404040 gui=bold   ctermfg=124  ctermbg=237  cterm=bold  
-"hi User6        guifg=#a8a8a8 guibg=#303030 gui=none   ctermfg=248  ctermbg=233  cterm=none  
+hi User6        guifg=#ff87d7 guibg=#404040 gui=none   ctermfg=212  ctermbg=237  cterm=bold  
 "hi User7        guifg=#eeeeee guibg=#404040 gui=italic ctermfg=255  ctermbg=237  cterm=italic
 "hi User8        guifg=#eeeeee guibg=#404040 gui=italic ctermfg=255  ctermbg=237  cterm=italic
 "hi User9        guifg=#eeeeee guibg=#404040 gui=italic ctermfg=255  ctermbg=237  cterm=italic

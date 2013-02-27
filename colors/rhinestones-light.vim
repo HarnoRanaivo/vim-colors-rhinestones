@@ -32,10 +32,10 @@ hi Search       guifg=#404040 guibg=#ffff87 gui=none   ctermfg=237  ctermbg=228 
 hi TabLine      guifg=#585858 guibg=#c6c6c6 gui=none   ctermfg=240  ctermbg=251  cterm=none  
 hi TabLineFill  guifg=#262626 guibg=#d0d0d0 gui=none   ctermfg=235  ctermbg=252  cterm=none  
 hi TabLineSel   guifg=#121212 guibg=#eeeeee gui=bold   ctermfg=233  ctermbg=255  cterm=bold  
-hi Pmenu        guifg=#585858 guibg=#c6c6c6 gui=none   ctermfg=240  ctermbg=251  cterm=none  
+hi Pmenu        guifg=#c6c6c6 guibg=#585858 gui=none   ctermfg=251  ctermbg=240  cterm=none  
 hi PmenuSel     guifg=#eeeeee guibg=#00afd7 gui=none   ctermfg=255  ctermbg=38   cterm=none  
-"hi PmenuSbar    guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24   cterm=none  
-"hi PmenuThumb   guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24   cterm=none  
+hi PmenuSbar    guifg=NONE    guibg=#585858 gui=none   ctermfg=NONE ctermbg=240  cterm=none  
+hi PmenuThumb   guifg=NONE    guibg=#c6c6c6 gui=none   ctermfg=NONE ctermbg=251  cterm=none  
 
 hi! link SpecialKey     NonText
 hi! link IncSearch      Search
@@ -66,12 +66,12 @@ hi! link Operator       Statement
 "}}}
 
 "" User colours {{{
-hi User1        guifg=#005f87 guibg=#d0d0d0 gui=italic ctermfg=24   ctermbg=252  cterm=none  
-hi User2        guifg=#5fafd7 guibg=#d0d0d0 gui=italic ctermfg=74   ctermbg=252  cterm=none  
-hi User3        guifg=#d78700 guibg=#d0d0d0 gui=italic ctermfg=172  ctermbg=252  cterm=none  
-hi User4        guifg=#87af00 guibg=#d0d0d0 gui=italic ctermfg=106  ctermbg=252  cterm=none  
-hi User5        guifg=#af0000 guibg=#d0d0d0 gui=italic ctermfg=124  ctermbg=252  cterm=none  
-"hi User6        guifg=#eeeeee guibg=#d0d0d0 gui=italic ctermfg=255  ctermbg=252  cterm=italic
+hi User1        guifg=#005f87 guibg=#d0d0d0 gui=bold   ctermfg=24   ctermbg=252  cterm=bold  
+hi User2        guifg=#5fafd7 guibg=#d0d0d0 gui=none   ctermfg=74   ctermbg=252  cterm=none  
+hi User3        guifg=#d78700 guibg=#d0d0d0 gui=none   ctermfg=172  ctermbg=252  cterm=none  
+hi User4        guifg=#87af00 guibg=#d0d0d0 gui=none   ctermfg=106  ctermbg=252  cterm=none  
+hi User5        guifg=#af0000 guibg=#d0d0d0 gui=bold   ctermfg=124  ctermbg=252  cterm=bold  
+hi User6        guifg=#ff87d7 guibg=#d0d0d0 gui=none   ctermfg=212  ctermbg=252  cterm=bold  
 "hi User7        guifg=#eeeeee guibg=#d0d0d0 gui=italic ctermfg=255  ctermbg=252  cterm=italic
 "hi User8        guifg=#eeeeee guibg=#d0d0d0 gui=italic ctermfg=255  ctermbg=252  cterm=italic
 "hi User9        guifg=#eeeeee guibg=#d0d0d0 gui=italic ctermfg=255  ctermbg=252  cterm=italic
@@ -95,6 +95,16 @@ if version >= 700
     hi! link SpellRare       SpellBad
 endif
 "}}}
+
+"" Specific colours for 'MiniBufExpl' {{{
+hi MBENormal                    guifg=#121212 guibg=NONE    gui=italic ctermfg=233  ctermbg=NONE cterm=none  
+hi MBEChanged                   guifg=#ff87d7 guibg=NONE    gui=italic ctermfg=212  ctermbg=NONE cterm=none  
+hi MBEVisibleNormal             guifg=#585858 guibg=NONE    gui=bold   ctermfg=240  ctermbg=NONE cterm=bold  
+hi MBEVisibleActive             guifg=#5fafd7 guibg=NONE    gui=bold   ctermfg=74   ctermbg=NONE cterm=bold  
+hi MBEVisibleChanged            guifg=#af0000 guibg=NONE    gui=italic ctermfg=124  ctermbg=NONE cterm=none  
+hi MBEVisibleChangedActive      guifg=#af0000 guibg=NONE    gui=bold   ctermfg=124  ctermbg=NONE cterm=bold  
+"}}}
+
 
 "" Specific colours for 'CtrlP' {{{
 " CtrlP buffer {{{
