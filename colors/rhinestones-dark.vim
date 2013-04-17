@@ -2,9 +2,9 @@
 " Colorscheme Name: Rhinestones dark
 " Maintainer: Harenome Ranaivoarivony Razanajato <harno.ranaivo@gmail.com>
 " Description: Colorscheme for both GUI and console Vim, dark version.
-" License: WTFPL, version 2 (see http://sam.zoy.org/wtfpl/COPYING).
+" License: WTFPL, version 2 (see http://wtfpl.net).
 " Version: 1.1
-" Last Change: February 27th 2013
+" Last Change: April 17th 2013
 " URL: https://github.com/HarnoRanaivo/rhinestones-colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -19,11 +19,12 @@ let colors_name="rhinestones-dark"
 
 "" Interface colours {{{
 hi Cursor       guifg=#121212 guibg=#a8a8a8 gui=none   ctermfg=233  ctermbg=248  cterm=none  
-hi Title        guifg=#dadada guibg=NONE    gui=bold   ctermfg=253  ctermbg=NONE cterm=bold 
+hi Title        guifg=#dadada guibg=NONE    gui=bold   ctermfg=253  ctermbg=NONE cterm=bold  
 hi Normal       guifg=#eeeeee guibg=#262626 gui=none   ctermfg=255  ctermbg=235  cterm=none  
 hi NonText      guifg=#a8a8a8 guibg=#303030 gui=none   ctermfg=248  ctermbg=236  cterm=none  
 hi Folded       guifg=#d0d0d0 guibg=#303030 gui=italic ctermfg=252  ctermbg=236  cterm=none  
-hi LineNr       guifg=#a8a8a8 guibg=#121212 gui=none   ctermfg=248  ctermbg=233  cterm=none  
+hi LineNr       guifg=#a8a8a8 guibg=#121221 gui=none   ctermfg=248  ctermbg=233  cterm=none  
+hi SignColumn   guifg=#a8a8a8 guibg=#1c1c1c gui=none   ctermfg=248  ctermbg=235  cterm=none  
 hi VertSplit    guifg=#404040 guibg=#404040 gui=none   ctermfg=237  ctermbg=237  cterm=none  
 hi StatusLine   guifg=#dadada guibg=#404040 gui=none   ctermfg=253  ctermbg=237  cterm=none  
 hi StatusLineNC guifg=#a8a8a8 guibg=#404040 gui=italic ctermfg=248  ctermbg=237  cterm=none  
@@ -37,6 +38,8 @@ hi PmenuSel     guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24  
 hi PmenuSbar    guifg=NONE    guibg=#121212 gui=none   ctermfg=NONE ctermbg=233  cterm=none  
 hi PmenuThumb   guifg=NONE    guibg=#a8a8a8 gui=none   ctermfg=NONE ctermbg=248  cterm=none  
 
+hi! link ColorColumn    NonText
+hi! link FoldColumn     LineNr
 hi! link SpecialKey     NonText
 hi! link IncSearch      Search
 "}}}
@@ -49,7 +52,7 @@ hi Type         guifg=#d7af5f guibg=NONE    gui=bold   ctermfg=179  ctermbg=NONE
 hi PreProc      guifg=#a5f1f1 guibg=NONE    gui=italic ctermfg=159  ctermbg=NONE cterm=none  
 hi Special      guifg=#ff87d7 guibg=NONE    gui=none   ctermfg=212  ctermbg=NONE cterm=none  
 hi String       guifg=#87af00 guibg=NONE    gui=italic ctermfg=106  ctermbg=NONE cterm=none  
-hi Constant     guifg=#87af00 guibg=NONE    gui=italic ctermfg=106  ctermbg=NONE cterm=none  
+hi Constant     guifg=#d7d75f guibg=NONE    gui=italic ctermfg=185  ctermbg=NONE cterm=none  
 hi MatchParen   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 
 hi! link Function       Normal
@@ -78,10 +81,10 @@ hi User6        guifg=#ff87d7 guibg=#404040 gui=none   ctermfg=212  ctermbg=237 
 "}}}
 
 "" Diff mode {{{
-"hi DiffAdd      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi DiffChange   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi DiffDelete   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi DiffText     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+hi DiffAdd      guifg=NONE    guibg=#262b26 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
+hi DiffChange   guifg=NONE    guibg=#262630 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
+hi DiffDelete   guifg=NONE    guibg=#302626 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
+hi DiffText     guifg=NONE    guibg=#303026 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
 "}}}
 
 "" Specific colours for Vim >= 7.0 {{{
@@ -95,6 +98,8 @@ if version >= 700
     hi! link SpellRare       SpellBad
 endif
 "}}}
+
+"" Specific colours for various plugins {{{
 
 "" Specific colours for 'MiniBufExpl' {{{
 hi MBENormal                    guifg=#a8a8a8 guibg=NONE    gui=italic ctermfg=248  ctermbg=NONE cterm=none  
@@ -150,7 +155,7 @@ hi MBEVisibleChangedActive      guifg=#af0000 guibg=NONE    gui=bold   ctermfg=1
 "hi TagbarVisibilityPrivate    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "}}}
 
-"" Specific colours for 'Gitv' {{{
+"" Specific colours for 'Undotree' {{{
 "hi! UndotreeNode             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "hi! UndotreeNodeCurrent      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "hi! UndotreeTimeStamp        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
@@ -165,4 +170,22 @@ hi MBEVisibleChangedActive      guifg=#af0000 guibg=NONE    gui=bold   ctermfg=1
 "hi! UndotreeHelpTitle        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "hi! UndotreeSavedSmall       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "hi! UndotreeSavedBig         guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+"}}}
+
+"" Specific colours for 'Gitgutter' {{{
+"" Symbols {{{
+hi GitGutterAdd                guifg=#005f00 guibg=#262b26 gui=none   ctermfg=22   ctermbg=236  cterm=none   
+hi GitGutterChange             guifg=#005fff guibg=#262630 gui=none   ctermfg=27   ctermbg=236  cterm=none   
+hi GitGutterDelete             guifg=#af0000 guibg=#302626 gui=none   ctermfg=124  ctermbg=236  cterm=none   
+hi GitGutterChangeDelete       guifg=#ffaf00 guibg=#303026 gui=none   ctermfg=214  ctermbg=236  cterm=none   
+"}}}
+
+"" Lines {{{
+hi! link GitGutterAddLine               DiffAdd
+hi! link GitGutterChangeLine            DiffChange
+hi! link GitGutterDeleteLine            DiffDelete
+hi! link GitGutterChangeDeleteLine      DiffText
+"}}}
+"}}}
+
 "}}}
