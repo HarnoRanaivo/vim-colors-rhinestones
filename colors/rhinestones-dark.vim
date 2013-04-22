@@ -45,7 +45,7 @@ hi! link IncSearch      Search
 "}}}
 
 "" Syntax highlighting {{{
-hi Todo         guifg=#121212 guibg=NONE    gui=italic ctermfg=233  ctermbg=NONE cterm=none   
+hi Todo         guifg=#121212 guibg=NONE    gui=italic ctermfg=233  ctermbg=NONE cterm=none  
 hi Comment      guifg=#a8a8a8 guibg=NONE    gui=italic ctermfg=248  ctermbg=NONE cterm=none  
 hi Statement    guifg=#5fafd7 guibg=NONE    gui=bold   ctermfg=74   ctermbg=NONE cterm=bold  
 hi Type         guifg=#d7af5f guibg=NONE    gui=bold   ctermfg=179  ctermbg=NONE cterm=bold  
@@ -54,15 +54,16 @@ hi Special      guifg=#ff87d7 guibg=NONE    gui=none   ctermfg=212  ctermbg=NONE
 hi String       guifg=#87af00 guibg=NONE    gui=italic ctermfg=106  ctermbg=NONE cterm=none  
 hi Constant     guifg=#d7d75f guibg=NONE    gui=italic ctermfg=185  ctermbg=NONE cterm=none  
 hi MatchParen   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+hi Label        guifg=#a5f1f1 guibg=NONE    gui=bold   ctermfg=159  ctermbg=NONE cterm=none  
 
 hi! link Function       Normal
 hi! link Character      String
 hi! link Boolean        Constant
 hi! link Number         Constant
 hi! link Float          Constant
-hi! link Identifier     Constant
+hi! link Identifier     Special
 hi! link Keyword        Statement
-hi! link Label          Statement
+" hi! link Label          PreProc
 hi! link Exception      Statement
 hi! link Conditional    Statement
 hi! link Operator       Statement
@@ -120,6 +121,12 @@ hi MBEVisibleChangedActive      guifg=#af0000 guibg=NONE    gui=bold   ctermfg=1
 "hi CtrlPPrtCursor    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "}}}
 
+" Statuslines {{{
+hi CtrlPMode1   guifg=#d7af5f guibg=#404040 gui=italic ctermfg=179  ctermbg=237  cterm=none  
+hi CtrlPMode2   guifg=#a5f1f1 guibg=#404040 gui=bold   ctermfg=159  ctermbg=237  cterm=none  
+" hi CtrlPStats   guifg=#eeeeee guibg=#404040 gui=none   ctermfg=255  ctermbg=237  cterm=none  
+"}}}
+
 " Extensions {{{
 "hi CtrlPTabExtra     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "hi CtrlPBufName      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
@@ -131,12 +138,6 @@ hi MBEVisibleChangedActive      guifg=#af0000 guibg=NONE    gui=bold   ctermfg=1
 "hi CtrlPUndoSv       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "hi CtrlPUndoPo       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "hi CtrlPBookmark     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"}}}
-
-" Statuslines {{{
-"hi CtrlPMode1        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPMode2        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPStats        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 "}}}
 "}}}
 
@@ -174,10 +175,10 @@ hi MBEVisibleChangedActive      guifg=#af0000 guibg=NONE    gui=bold   ctermfg=1
 
 "" Specific colours for 'Gitgutter' {{{
 "" Symbols {{{
-hi GitGutterAdd                guifg=#005f00 guibg=#262b26 gui=none   ctermfg=22   ctermbg=236  cterm=none   
-hi GitGutterChange             guifg=#005fff guibg=#262630 gui=none   ctermfg=27   ctermbg=236  cterm=none   
-hi GitGutterDelete             guifg=#af0000 guibg=#302626 gui=none   ctermfg=124  ctermbg=236  cterm=none   
-hi GitGutterChangeDelete       guifg=#ffaf00 guibg=#303026 gui=none   ctermfg=214  ctermbg=236  cterm=none   
+hi GitGutterAdd                guifg=#005f00 guibg=#262b26 gui=none   ctermfg=22   ctermbg=236  cterm=none  
+hi GitGutterChange             guifg=#005fff guibg=#262630 gui=none   ctermfg=27   ctermbg=236  cterm=none  
+hi GitGutterDelete             guifg=#af0000 guibg=#302626 gui=none   ctermfg=124  ctermbg=236  cterm=none  
+hi GitGutterChangeDelete       guifg=#ffaf00 guibg=#303026 gui=none   ctermfg=214  ctermbg=236  cterm=none  
 "}}}
 
 "" Lines {{{
