@@ -4,7 +4,7 @@
 " Description: Colorscheme for both GUI and console Vim, dark version.
 " License: WTFPL, version 2 (see http://wtfpl.net).
 " Version: 1.1
-" Last Change: April 17th 2013
+" Last Change: May 4th 2013
 " URL: https://github.com/HarnoRanaivo/rhinestones-colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -23,7 +23,7 @@ hi Title        guifg=#dadada guibg=NONE    gui=bold   ctermfg=253  ctermbg=NONE
 hi Normal       guifg=#eeeeee guibg=#262626 gui=none   ctermfg=255  ctermbg=235  cterm=none  
 hi NonText      guifg=#a8a8a8 guibg=#303030 gui=none   ctermfg=248  ctermbg=236  cterm=none  
 hi Folded       guifg=#d0d0d0 guibg=#303030 gui=italic ctermfg=252  ctermbg=236  cterm=none  
-hi LineNr       guifg=#a8a8a8 guibg=#121221 gui=none   ctermfg=248  ctermbg=233  cterm=none  
+hi LineNr       guifg=#a8a8a8 guibg=#121212 gui=none   ctermfg=248  ctermbg=233  cterm=none  
 hi SignColumn   guifg=#a8a8a8 guibg=#1c1c1c gui=none   ctermfg=248  ctermbg=235  cterm=none  
 hi VertSplit    guifg=#404040 guibg=#404040 gui=none   ctermfg=237  ctermbg=237  cterm=none  
 hi StatusLine   guifg=#dadada guibg=#404040 gui=none   ctermfg=253  ctermbg=237  cterm=none  
@@ -187,6 +187,34 @@ hi! link GitGutterChangeLine            DiffChange
 hi! link GitGutterDeleteLine            DiffDelete
 hi! link GitGutterChangeDeleteLine      DiffText
 "}}}
+"}}}
+
+"" Specific colours for 'Vim-Easytags' {{{
+hi cTypeTag     guifg=#d7af5f guibg=NONE    gui=none   ctermfg=179  ctermbg=NONE cterm=none  
+hi cPreProcTag  guifg=#a5f1f1 guibg=NONE    gui=none   ctermfg=159  ctermbg=NONE cterm=none  
+hi cFunctionTag guifg=#eeeeee guibg=#262626 gui=bold   ctermfg=255  ctermbg=235  cterm=bold  
+hi! link cEnumTag Special
+" hi! link cMemberTag Special
+"}}}
+
+"" Specific colours for 'Rainbow' {{{
+let g:rainbow_guifgs = [
+    \ '#5dd0f7',
+    \ '#7cc632',
+    \ '#dccc49',
+    \ '#a95d01',
+    \ '#e72929',
+    \ '#997395',
+    \ ]
+
+let g:rainbow_ctermfgs = [
+    \ 'lightblue',
+    \ 'green',
+    \ 'yellow',
+    \ 'darkyellow',
+    \ 'red',
+    \ 'magenta',
+    \ ]
 "}}}
 
 "}}}
