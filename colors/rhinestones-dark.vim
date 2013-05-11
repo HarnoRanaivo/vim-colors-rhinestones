@@ -3,8 +3,8 @@
 " Maintainer: Harenome Ranaivoarivony Razanajato <harno.ranaivo@gmail.com>
 " Description: Colorscheme for both GUI and console Vim, dark version.
 " License: WTFPL, version 2 (see http://wtfpl.net).
-" Version: 1.1
-" Last Change: May 4th 2013
+" Version: 1.2
+" Last Change: May 11th 2013
 " URL: https://github.com/HarnoRanaivo/rhinestones-colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -18,18 +18,18 @@ let colors_name="rhinestones-dark"
 "}}}
 
 "" Interface colours {{{
-hi Cursor       guifg=#121212 guibg=#a8a8a8 gui=none   ctermfg=233  ctermbg=248  cterm=none  
+hi Cursor       guifg=#080808 guibg=#a8a8a8 gui=none   ctermfg=232  ctermbg=248  cterm=none  
 hi Title        guifg=#dadada guibg=NONE    gui=bold   ctermfg=253  ctermbg=NONE cterm=bold  
 hi Normal       guifg=#eeeeee guibg=#262626 gui=none   ctermfg=255  ctermbg=235  cterm=none  
-hi NonText      guifg=#a8a8a8 guibg=#303030 gui=none   ctermfg=248  ctermbg=236  cterm=none  
+hi NonText      guifg=#a8a8a8 guibg=#303030 gui=italic ctermfg=248  ctermbg=236  cterm=none  
 hi Folded       guifg=#d0d0d0 guibg=#303030 gui=italic ctermfg=252  ctermbg=236  cterm=none  
-hi LineNr       guifg=#a8a8a8 guibg=#121212 gui=none   ctermfg=248  ctermbg=233  cterm=none  
+hi LineNr       guifg=#a8a8a8 guibg=#080808 gui=italic ctermfg=248  ctermbg=232  cterm=none  
 hi SignColumn   guifg=#a8a8a8 guibg=#1c1c1c gui=none   ctermfg=248  ctermbg=235  cterm=none  
 hi VertSplit    guifg=#404040 guibg=#404040 gui=none   ctermfg=237  ctermbg=237  cterm=none  
 hi StatusLine   guifg=#dadada guibg=#404040 gui=none   ctermfg=253  ctermbg=237  cterm=none  
 hi StatusLineNC guifg=#a8a8a8 guibg=#404040 gui=italic ctermfg=248  ctermbg=237  cterm=none  
-hi Visual       guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24   cterm=none  
-hi Search       guifg=#404040 guibg=#ffff87 gui=none   ctermfg=237  ctermbg=228  cterm=none  
+hi Visual       guifg=#eeeeee guibg=#005f87 gui=italic ctermfg=255  ctermbg=24   cterm=none  
+hi Search       guifg=#404040 guibg=#ffff5f gui=italic ctermfg=237  ctermbg=227  cterm=none  
 hi TabLine      guifg=#a8a8a8 guibg=#303030 gui=none   ctermfg=248  ctermbg=236  cterm=none  
 hi TabLineFill  guifg=#dadada guibg=#404040 gui=none   ctermfg=253  ctermbg=237  cterm=none  
 hi TabLineSel   guifg=#eeeeee guibg=#262626 gui=bold   ctermfg=255  ctermbg=235  cterm=bold  
@@ -48,17 +48,20 @@ hi! link IncSearch      Search
 hi Todo         guifg=#121212 guibg=NONE    gui=italic ctermfg=233  ctermbg=NONE cterm=none  
 hi Comment      guifg=#a8a8a8 guibg=NONE    gui=italic ctermfg=248  ctermbg=NONE cterm=none  
 hi Statement    guifg=#5fafd7 guibg=NONE    gui=bold   ctermfg=74   ctermbg=NONE cterm=bold  
+hi Operator     guifg=#ffd7d7 guibg=NONE    gui=bold   ctermfg=224  ctermbg=NONE cterm=bold  
 hi Type         guifg=#d7af5f guibg=NONE    gui=bold   ctermfg=179  ctermbg=NONE cterm=bold  
 hi PreProc      guifg=#a5f1f1 guibg=NONE    gui=italic ctermfg=159  ctermbg=NONE cterm=none  
-hi Special      guifg=#ff87d7 guibg=NONE    gui=none   ctermfg=212  ctermbg=NONE cterm=none  
+hi Special      guifg=#ff87d7 guibg=NONE    gui=italic ctermfg=212  ctermbg=NONE cterm=none  
 hi String       guifg=#87af00 guibg=NONE    gui=italic ctermfg=106  ctermbg=NONE cterm=none  
+hi Character    guifg=#afd75f guibg=NONE    gui=italic ctermfg=149  ctermbg=NONE cterm=none  
 hi Constant     guifg=#d7d75f guibg=NONE    gui=italic ctermfg=185  ctermbg=NONE cterm=none  
-hi MatchParen   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+hi Boolean      guifg=#ffff5f guibg=NONE    gui=italic ctermfg=227  ctermbg=NONE cterm=none  
 hi Label        guifg=#a5f1f1 guibg=NONE    gui=bold   ctermfg=159  ctermbg=NONE cterm=none  
+hi MatchParen   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
 
 hi! link Function       Normal
-hi! link Character      String
-hi! link Boolean        Constant
+" hi! link Character      String
+" hi! link Boolean        Constant
 hi! link Number         Constant
 hi! link Float          Constant
 hi! link Identifier     Special
@@ -66,7 +69,7 @@ hi! link Keyword        Statement
 " hi! link Label          PreProc
 hi! link Exception      Statement
 hi! link Conditional    Statement
-hi! link Operator       Statement
+" hi! link Operator       Statement
 "}}}
 
 "" User colours {{{
@@ -82,15 +85,15 @@ hi User6        guifg=#ff87d7 guibg=#404040 gui=none   ctermfg=212  ctermbg=237 
 "}}}
 
 "" Diff mode {{{
-hi DiffAdd      guifg=NONE    guibg=#262b26 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
-hi DiffChange   guifg=NONE    guibg=#262630 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
-hi DiffDelete   guifg=NONE    guibg=#302626 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
-hi DiffText     guifg=NONE    guibg=#303026 gui=none   ctermfg=NONE ctermbg=236  cterm=none  
+hi DiffAdd      guifg=NONE    guibg=#263526 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
+hi DiffChange   guifg=NONE    guibg=#262635 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
+hi DiffDelete   guifg=NONE    guibg=#352626 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
+hi DiffText     guifg=NONE    guibg=#353526 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
 "}}}
 
 "" Specific colours for Vim >= 7.0 {{{
 if version >= 700
-    hi CursorLine   guibg=#303030 ctermbg=236
+    hi CursorLine   guibg=#404040 ctermbg=237 cterm=none
     hi SpellBad     guisp=#af0000 ctermfg=124
 
     hi! link CursorColumn    CursorLine
@@ -104,11 +107,11 @@ endif
 
 "" Specific colours for 'MiniBufExpl' {{{
 hi MBENormal                    guifg=#a8a8a8 guibg=NONE    gui=italic ctermfg=248  ctermbg=NONE cterm=none  
-hi MBEChanged                   guifg=#ff87d7 guibg=NONE    gui=italic ctermfg=212  ctermbg=NONE cterm=none  
-hi MBEVisibleNormal             guifg=#eeeeee guibg=NONE    gui=bold   ctermfg=255  ctermbg=NONE cterm=bold  
-hi MBEVisibleActive             guifg=#a5f1f1 guibg=NONE    gui=bold   ctermfg=159  ctermbg=NONE cterm=bold  
-hi MBEVisibleChanged            guifg=#af0000 guibg=NONE    gui=italic ctermfg=124  ctermbg=NONE cterm=none  
-hi MBEVisibleChangedActive      guifg=#af0000 guibg=NONE    gui=bold   ctermfg=124  ctermbg=NONE cterm=bold  
+hi MBEChanged                   guifg=#d75f5f guibg=NONE    gui=italic ctermfg=167  ctermbg=NONE cterm=none  
+hi MBEVisibleNormal             guifg=#eeeeee guibg=NONE    gui=NONE   ctermfg=255  ctermbg=NONE cterm=none  
+hi MBEVisibleChanged            guifg=#af0000 guibg=NONE    gui=NONE   ctermfg=124  ctermbg=NONE cterm=none  
+hi MBEVisibleActive             guifg=#ffffff guibg=NONE    gui=bold   ctermfg=15   ctermbg=NONE cterm=bold  
+hi MBEVisibleChangedActive      guifg=#d70000 guibg=NONE    gui=bold   ctermfg=160  ctermbg=NONE cterm=bold  
 "}}}
 
 "" Specific colours for 'CtrlP' {{{
@@ -142,18 +145,19 @@ hi CtrlPMode2   guifg=#a5f1f1 guibg=#404040 gui=bold   ctermfg=159  ctermbg=237 
 "}}}
 
 "" Specific colours for 'Tagbar' {{{
-"hi TagbarComment              guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarKind                 guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarNestedKind           guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarScope                guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarType                 guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarSignature            guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarPseudoID             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarFoldIcon             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarHighlight            guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarVisibilityPublic     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarVisibilityProtected  guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi TagbarVisibilityPrivate    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+hi TagbarScope                  guifg=#ffffff guibg=NONE    gui=bold   ctermfg=15   ctermbg=NONE cterm=bold  
+hi TagbarVisibilityPublic       guifg=#afd700 guibg=NONE    gui=bold   ctermfg=148  ctermbg=NONE cterm=bold  
+hi TagbarVisibilityProtected    guifg=#ffff5f guibg=NONE    gui=bold   ctermfg=227  ctermbg=NONE cterm=bold  
+hi TagbarVisibilityPrivate      guifg=#d70000 guibg=NONE    gui=bold   ctermfg=160  ctermbg=NONE cterm=bold  
+
+hi! link TagbarComment      Comment
+hi! link TagbarKind         Statement
+hi! link TagbarNestedKind   Operator
+hi! link TagbarType         Type
+hi! link TagbarSignature    PreProc
+hi! link TagbarPseudoID     Special
+hi! link TagbarFoldIcon     Special
+hi! link TagbarHighlight    Search
 "}}}
 
 "" Specific colours for 'Undotree' {{{
@@ -175,10 +179,10 @@ hi CtrlPMode2   guifg=#a5f1f1 guibg=#404040 gui=bold   ctermfg=159  ctermbg=237 
 
 "" Specific colours for 'Gitgutter' {{{
 "" Symbols {{{
-hi GitGutterAdd                guifg=#005f00 guibg=#262b26 gui=none   ctermfg=22   ctermbg=236  cterm=none  
-hi GitGutterChange             guifg=#005fff guibg=#262630 gui=none   ctermfg=27   ctermbg=236  cterm=none  
-hi GitGutterDelete             guifg=#af0000 guibg=#302626 gui=none   ctermfg=124  ctermbg=236  cterm=none  
-hi GitGutterChangeDelete       guifg=#ffaf00 guibg=#303026 gui=none   ctermfg=214  ctermbg=236  cterm=none  
+hi GitGutterAdd                guifg=#005f00 guibg=#263526 gui=none   ctermfg=22   ctermbg=NONE cterm=bold  
+hi GitGutterChange             guifg=#005fff guibg=#262635 gui=none   ctermfg=27   ctermbg=NONE cterm=bold  
+hi GitGutterDelete             guifg=#af0000 guibg=#352626 gui=none   ctermfg=124  ctermbg=NONE cterm=bold  
+hi GitGutterChangeDelete       guifg=#ffaf00 guibg=#353526 gui=none   ctermfg=214  ctermbg=NONE cterm=bold  
 "}}}
 
 "" Lines {{{
@@ -218,3 +222,6 @@ let g:rainbow_ctermfgs = [
 "}}}
 
 "}}}
+
+"" Special settings for this file.
+" vim:ft=vim:fdm=marker:ff=unix:foldopen=all:foldclose=all
