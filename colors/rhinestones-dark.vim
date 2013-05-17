@@ -142,8 +142,8 @@ call s:defHighlightGroup('NonText', s:gGray17, s:gGray5, 'italic', s:cGray17, s:
 call s:defHighlightGroup('Folded', s:gGray21, s:gGray5, 'italic', s:cGray21, s:cGray5, 'none')
 call s:defHighlightGroup('LineNR', s:gGray17, s:gGray1, 'italic', s:cGray17, s:cGray1, 'none')
 call s:defHighlightGroup('SignColumn', s:gGray17, s:gGray1, 'none', s:cGray17, s:cGray1, 'none')
-call s:defHighlightGroup('VertSplit', s:gGray6, s:gGray6, 'none', s:cGray6, s:cGray6, 'none')
-call s:defHighlightGroup('StatusLine', s:gGray22, s:gGray6, 'none', s:cGray22, s:cGray6, 'none')
+call s:defHighlightGroup('VertSplit', s:gGray6, s:gGray7, 'none', s:cGray6, s:cGray7, 'none')
+call s:defHighlightGroup('StatusLine', s:gGray22, s:gGray7, 'none', s:cGray22, s:cGray7, 'none')
 call s:defHighlightGroup('StatusLineNC', s:gGray17, s:gGray6, 'italic', s:cGray17, s:cGray6, 'none')
 call s:defHighlightGroup('Visual', s:gGray24, s:gBlue4, 'italic', s:cGray24, s:cBlue4, 'none')
 call s:defHighlightGroup('Search', s:gGray6, s:gYellow2, 'italic', s:cGray6, s:cYellow2, 'none')
@@ -185,24 +185,28 @@ hi! link Exception      Statement
 hi! link Conditional    Statement
 "}}}
 
-"" User colours {{{
-call s:defHighlightGroup('User1', s:gBlue2, s:gGray6, 'bold', s:cBlue2, s:cGray6, 'bold')
-call s:defHighlightGroup('User2', s:gBlue3, s:gGray6, 'none', s:cBlue3, s:cGray6, 'none')
-call s:defHighlightGroup('User3', s:gOrange1, s:gGray6, 'none', s:cOrange1, s:cGray6, 'none')
-call s:defHighlightGroup('User4', s:gGreen2, s:gGray6, 'none', s:cGreen2, s:cGray6, 'none')
-call s:defHighlightGroup('User5', s:gRed1, s:gGray6, 'bold', s:cRed1, s:cGray6, 'bold')
-call s:defHighlightGroup('User6', s:gPink1, s:gGray6, 'none', s:cPink1, s:cGray6, 'bold')
+"" Status Line {{{
+call s:defHighlightGroup('STANBuffer', s:gWhite, s:gGray13, 'bold', s:cWhite, s:cGray13, 'bold')
+call s:defHighlightGroup('STANGit', s:gBlue3, s:gGray11, 'bold', s:cBlue3, s:cGray11, 'bold')
+call s:defHighlightGroup('STANFile', s:gGray23, s:gGray11, 'bold', s:cGray23, s:cGray11, 'bold')
+call s:defHighlightGroup('STANFileTypes', s:gOrange1, s:gGray9, 'none', s:cGray15, s:cGray9, 'none')
+call s:defHighlightGroup('STANGreenFlags', s:gGreen2, s:gGray9, 'bold', s:cGreen2, s:cGray9, 'bold')
+call s:defHighlightGroup('STANOrangeFlags', s:gOrange2, s:gGray9, 'bold', s:cOrange2, s:cGray9, 'bold')
+call s:defHighlightGroup('STANRedFlags', s:gRed1, s:gGray9, 'bold', s:cRed1, s:cGray9, 'bold')
+call s:defHighlightGroup('STANPositionLight', s:gGray20, s:gGray11, 'bold', s:cGray20, s:cGray11, 'bold')
+call s:defHighlightGroup('STANPositionDark', s:gGray5, s:gGray11, 'none', s:cGray5, s:cGray11, 'none')
+call s:defHighlightGroup('STANPositionPercentage', s:gPink2, s:gGray13, 'bold', s:cPink2, s:cGray13, 'bold')
 
-call s:defHighlightGroup('STBuffer', s:gWhite, s:gGray14, 'bold', s:cWhite, s:cGray14, 'bold')
-call s:defHighlightGroup('STGit', s:gBlue2, s:gGray10, 'bold', s:cBlue2, s:cGray10, 'bold')
-call s:defHighlightGroup('STFile', s:gGray23, s:gGray10, 'bold', s:cGray23, s:cGray10, 'bold')
-call s:defHighlightGroup('STFileTypes', s:gGray15, s:gGray8, 'none', s:cGray15, s:cGray8, 'none')
-call s:defHighlightGroup('STGreenFlags', s:gGreen2, s:gGray8, 'bold', s:cGreen2, s:cGray8, 'bold')
-call s:defHighlightGroup('STOrangeFlags', s:gOrange2, s:gGray8, 'bold', s:cOrange2, s:cGray8, 'bold')
-call s:defHighlightGroup('STRedFlags', s:gRed1, s:gGray8, 'bold', s:cRed1, s:cGray8, 'bold')
-call s:defHighlightGroup('STPositionLight', s:gGray20, s:gGray10, 'bold', s:cGray20, s:cGray10, 'bold')
-call s:defHighlightGroup('STPositionDark', s:gGray5, s:gGray10, 'none', s:cGray5, s:cGray10, 'none')
-call s:defHighlightGroup('STPositionPercentage', s:gGray24, s:gGray14, 'bold', s:cGray24, s:cGray14, 'bold')
+call s:defHighlightGroup('STNCBuffer', s:gWhite, s:gGray14, 'italic', s:cWhite, s:cGray14, 'none')
+call s:defHighlightGroup('STNCGit', s:gBlue3, s:gGray10, 'italic', s:cBlue2, s:cGray10, 'none')
+call s:defHighlightGroup('STNCFile', s:gGray23, s:gGray10, 'italic', s:cGray23, s:cGray10, 'none')
+call s:defHighlightGroup('STNCFileTypes', s:gGray15, s:gGray8, 'italic', s:cGray15, s:cGray8, 'none')
+call s:defHighlightGroup('STNCGreenFlags', s:gGreen2, s:gGray8, 'italic', s:cGreen2, s:cGray8, 'none')
+call s:defHighlightGroup('STNCOrangeFlags', s:gOrange2, s:gGray8, 'italic', s:cOrange2, s:cGray8, 'none')
+call s:defHighlightGroup('STNCRedFlags', s:gRed1, s:gGray8, 'italic', s:cRed1, s:cGray8, 'none')
+call s:defHighlightGroup('STNCPositionLight', s:gGray20, s:gGray10, 'italic', s:cGray20, s:cGray10, 'none')
+call s:defHighlightGroup('STNCPositionDark', s:gGray5, s:gGray10, 'italic', s:cGray5, s:cGray10, 'none')
+call s:defHighlightGroup('STNCPositionPercentage', s:gGray24, s:gGray14, 'italic', s:cGray24, s:cGray14, 'none')
 "}}}
 
 "" Diff mode {{{
