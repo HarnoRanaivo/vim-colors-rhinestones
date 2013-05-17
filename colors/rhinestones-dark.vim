@@ -17,26 +17,143 @@ endif
 let colors_name="rhinestones-dark"
 "}}}
 
+"" Custom highlighting function {{{
+function! s:defHighlightGroup(group, gfg, gbg, gmod, cfg, cbg, cmod)
+    execute 'hi ' . a:group . ' guifg=' . a:gfg . ' guibg=' . a:gbg . ' gui=' . a:gmod
+        \ . ' ctermfg=' . a:cfg . ' ctermbg=' . a:cbg . ' cterm=' . a:cmod
+endfunction
+"}}}
+
+"" Gui Colours {{{
+let s:gWhite = '#ffffff'
+
+let s:gGray1  = '#080808'
+let s:gGray2  = '#121212'
+let s:gGray3  = '#1c1c1c'
+let s:gGray4  = '#262626'
+let s:gGray5  = '#303030'
+let s:gGray6  = '#404040'
+let s:gGray7  = '#444444'
+let s:gGray8  = '#4d4d4d'
+let s:gGray9  = '#585858'
+let s:gGray10 = '#626262'
+let s:gGray11 = '#6a6a6a'
+let s:gGray12 = '#767676'
+let s:gGray13 = '#808080'
+let s:gGray14 = '#898989'
+let s:gGray15 = '#949494'
+let s:gGray16 = '#9c9c9c'
+let s:gGray17 = '#a8a8a8'
+let s:gGray18 = '#b2b2b2'
+let s:gGray19 = '#bcbcbc'
+let s:gGray20 = '#c6c6c6'
+let s:gGray21 = '#d0d0d0'
+let s:gGray22 = '#dadada'
+let s:gGray23 = '#e4e4e4'
+let s:gGray24 = '#eeeeee'
+
+let s:gGray4Blue = '#262635'
+let s:gGray4Green = '#263526'
+let s:gGray4Red = '#352626'
+let s:gGray4Yellow = '#353526'
+
+let s:gBlue1 = '#005fff'
+let s:gBlue2 = '#5fafd7'
+let s:gBlue3 = '#a5f1f1'
+let s:gBlue4 = '#005f87'
+
+let s:gPink1 = '#ff87d7'
+let s:gPink2 = '#ffd7d7'
+
+let s:gOrange1 = '#d7af5f'
+let s:gOrange2 = '#ffaf00'
+
+let s:gGreen1 = '#005f00'
+let s:gGreen2 = '#87af00'
+let s:gGreen3 = '#afd75f'
+let s:gGreen4 = '#afd700'
+
+let s:gYellow1 = '#d7d75f'
+let s:gYellow2 = '#ffff5f'
+
+let s:gRed1 = '#af0000'
+let s:gRed2 = '#d70000'
+let s:gRed3 = '#d75f5f'
+"}}}
+
+"" Term Colours {{{
+let s:cWhite = '15'
+
+let s:cGray1 = '232'
+let s:cGray2 = '233'
+let s:cGray3 = '234'
+let s:cGray4 = '235'
+let s:cGray5 = '236'
+let s:cGray6 = '237'
+let s:cGray7 = '238'
+let s:cGray8 = '239'
+let s:cGray9 = '240'
+let s:cGray10 = '241'
+let s:cGray11 = '242'
+let s:cGray12 = '243'
+let s:cGray13 = '244'
+let s:cGray14 = '245'
+let s:cGray15 = '246'
+let s:cGray16 = '247'
+let s:cGray17 = '248'
+let s:cGray18 = '249'
+let s:cGray19 = '250'
+let s:cGray20 = '251'
+let s:cGray21 = '252'
+let s:cGray22 = '253'
+let s:cGray23 = '254'
+let s:cGray24 = '255'
+
+let s:cBlue1 = '27'
+let s:cBlue2 = '74'
+let s:cBlue3 = '159'
+let s:cBlue4 = '24'
+
+let s:cPink1 = '212'
+let s:cPink2 = '224'
+
+let s:cOrange1 = '179'
+let s:cOrange2 = '214'
+
+let s:cGreen1 = '22'
+let s:cGreen2 = '106'
+let s:cGreen3 = '149'
+let s:cGreen4 = '148'
+
+let s:cYellow1 = '185'
+let s:cYellow2 = '227'
+
+let s:cRed1 = '124'
+let s:cRed2 = '160'
+let s:cRed3 = '167'
+"}}}
+
 "" Interface colours {{{
-hi Cursor       guifg=#080808 guibg=#a8a8a8 gui=none   ctermfg=232  ctermbg=248  cterm=none  
-hi Title        guifg=#dadada guibg=NONE    gui=bold   ctermfg=253  ctermbg=NONE cterm=bold  
-hi Normal       guifg=#eeeeee guibg=#262626 gui=none   ctermfg=255  ctermbg=235  cterm=none  
-hi NonText      guifg=#a8a8a8 guibg=#303030 gui=italic ctermfg=248  ctermbg=236  cterm=none  
-hi Folded       guifg=#d0d0d0 guibg=#303030 gui=italic ctermfg=252  ctermbg=236  cterm=none  
-hi LineNr       guifg=#a8a8a8 guibg=#080808 gui=italic ctermfg=248  ctermbg=232  cterm=none  
-hi SignColumn   guifg=#a8a8a8 guibg=#1c1c1c gui=none   ctermfg=248  ctermbg=235  cterm=none  
-hi VertSplit    guifg=#404040 guibg=#404040 gui=none   ctermfg=237  ctermbg=237  cterm=none  
-hi StatusLine   guifg=#dadada guibg=#404040 gui=none   ctermfg=253  ctermbg=237  cterm=none  
-hi StatusLineNC guifg=#a8a8a8 guibg=#404040 gui=italic ctermfg=248  ctermbg=237  cterm=none  
-hi Visual       guifg=#eeeeee guibg=#005f87 gui=italic ctermfg=255  ctermbg=24   cterm=none  
-hi Search       guifg=#404040 guibg=#ffff5f gui=italic ctermfg=237  ctermbg=227  cterm=none  
-hi TabLine      guifg=#a8a8a8 guibg=#303030 gui=none   ctermfg=248  ctermbg=236  cterm=none  
-hi TabLineFill  guifg=#dadada guibg=#404040 gui=none   ctermfg=253  ctermbg=237  cterm=none  
-hi TabLineSel   guifg=#eeeeee guibg=#262626 gui=bold   ctermfg=255  ctermbg=235  cterm=bold  
-hi Pmenu        guifg=#a8a8a8 guibg=#404040 gui=none   ctermfg=248  ctermbg=237  cterm=none  
-hi PmenuSel     guifg=#eeeeee guibg=#005f87 gui=none   ctermfg=255  ctermbg=24   cterm=none  
-hi PmenuSbar    guifg=NONE    guibg=#121212 gui=none   ctermfg=NONE ctermbg=233  cterm=none  
-hi PmenuThumb   guifg=NONE    guibg=#a8a8a8 gui=none   ctermfg=NONE ctermbg=248  cterm=none  
+
+call s:defHighlightGroup('Cursor', s:gGray1, s:gGray17, 'none', s:cGray1, s:cGray17, 'none')
+call s:defHighlightGroup('Title', s:gGray22, 'NONE', 'bold', s:cGray22, 'NONE', 'bold')
+call s:defHighlightGroup('Normal', s:gGray24, s:gGray4, 'none', s:cGray24, s:cGray4, 'none')
+call s:defHighlightGroup('NonText', s:gGray17, s:gGray5, 'italic', s:cGray17, s:cGray5, 'none')
+call s:defHighlightGroup('Folded', s:gGray21, s:gGray5, 'italic', s:cGray21, s:cGray5, 'none')
+call s:defHighlightGroup('LineNR', s:gGray17, s:gGray1, 'italic', s:cGray17, s:cGray1, 'none')
+call s:defHighlightGroup('SignColumn', s:gGray17, s:gGray1, 'none', s:cGray17, s:cGray1, 'none')
+call s:defHighlightGroup('VertSplit', s:gGray6, s:gGray6, 'none', s:cGray6, s:cGray6, 'none')
+call s:defHighlightGroup('StatusLine', s:gGray22, s:gGray6, 'none', s:cGray22, s:cGray6, 'none')
+call s:defHighlightGroup('StatusLineNC', s:gGray17, s:gGray6, 'italic', s:cGray17, s:cGray6, 'none')
+call s:defHighlightGroup('Visual', s:gGray24, s:gBlue4, 'italic', s:cGray24, s:cBlue4, 'none')
+call s:defHighlightGroup('Search', s:gGray6, s:gYellow2, 'italic', s:cGray6, s:cYellow2, 'none')
+call s:defHighlightGroup('TabLine', s:gGray17, s:gGray5, 'none', s:cGray17, s:cGray5, 'none')
+call s:defHighlightGroup('TabLineFill', s:gGray22, s:gGray6, 'none', s:cGray22, s:cGray6, 'none')
+call s:defHighlightGroup('TabLineSel', s:gGray24, s:gGray4, 'none', s:cGray24, s:cGray4, 'none')
+call s:defHighlightGroup('Pmenu', s:gGray17, s:gGray6, 'none', s:cGray17, s:cGray6, 'none')
+call s:defHighlightGroup('PmenuSel', s:gGray24, s:gBlue4, 'none', s:cGray24, s:cBlue4, 'none')
+call s:defHighlightGroup('PmenuSbar', 'NONE', s:gGray2, 'none', 'NONE', s:cGray2, 'none')
+call s:defHighlightGroup('PmenuThumb', 'NONE', s:gGray17, 'none', 'NONE', s:cGray17, 'none')
 
 hi! link ColorColumn    NonText
 hi! link FoldColumn     LineNr
@@ -45,55 +162,59 @@ hi! link IncSearch      Search
 "}}}
 
 "" Syntax highlighting {{{
-hi Todo         guifg=#121212 guibg=NONE    gui=italic ctermfg=233  ctermbg=NONE cterm=none  
-hi Comment      guifg=#a8a8a8 guibg=NONE    gui=italic ctermfg=248  ctermbg=NONE cterm=none  
-hi Statement    guifg=#5fafd7 guibg=NONE    gui=bold   ctermfg=74   ctermbg=NONE cterm=bold  
-hi Operator     guifg=#ffd7d7 guibg=NONE    gui=bold   ctermfg=224  ctermbg=NONE cterm=bold  
-hi Type         guifg=#d7af5f guibg=NONE    gui=bold   ctermfg=179  ctermbg=NONE cterm=bold  
-hi PreProc      guifg=#a5f1f1 guibg=NONE    gui=italic ctermfg=159  ctermbg=NONE cterm=none  
-hi Special      guifg=#ff87d7 guibg=NONE    gui=italic ctermfg=212  ctermbg=NONE cterm=none  
-hi String       guifg=#87af00 guibg=NONE    gui=italic ctermfg=106  ctermbg=NONE cterm=none  
-hi Character    guifg=#afd75f guibg=NONE    gui=italic ctermfg=149  ctermbg=NONE cterm=none  
-hi Constant     guifg=#d7d75f guibg=NONE    gui=italic ctermfg=185  ctermbg=NONE cterm=none  
-hi Boolean      guifg=#ffff5f guibg=NONE    gui=italic ctermfg=227  ctermbg=NONE cterm=none  
-hi Label        guifg=#a5f1f1 guibg=NONE    gui=bold   ctermfg=159  ctermbg=NONE cterm=none  
-hi MatchParen   guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
+call s:defHighlightGroup('Todo', s:gGray2, 'NONE', 'italic', s:cGray2, 'NONE', 'none')
+call s:defHighlightGroup('Comment', s:gGray17, 'NONE', 'italic', s:cGray17, 'NONE', 'none')
+call s:defHighlightGroup('Statement', s:gBlue2, 'NONE', 'bold', s:cBlue2, 'NONE', 'bold')
+call s:defHighlightGroup('Operator', s:gPink2, 'NONE', 'bold', s:cPink2, 'NONE', 'bold')
+call s:defHighlightGroup('Type', s:gOrange1, 'NONE', 'bold', s:cOrange1, 'NONE', 'bold')
+call s:defHighlightGroup('PreProc', s:gBlue3, 'NONE', 'italic', s:cBlue3, 'NONE', 'none')
+call s:defHighlightGroup('Special', s:gPink1, 'NONE', 'italic', s:cPink1, 'NONE', 'none')
+call s:defHighlightGroup('String', s:gGreen2, 'NONE', 'italic', s:cGreen2, 'NONE', 'none')
+call s:defHighlightGroup('Character', s:gGreen3, 'NONE', 'italic', s:cGreen3, 'NONE', 'none')
+call s:defHighlightGroup('Constant', s:gYellow1, 'NONE', 'italic', s:cYellow1, 'NONE', 'none')
+call s:defHighlightGroup('Boolean', s:gYellow2, 'NONE', 'italic', s:cYellow2, 'NONE', 'none')
+call s:defHighlightGroup('Label', s:gBlue3, 'NONE', 'bold', s:cBlue3, 'NONE', 'bold')
+call s:defHighlightGroup('MatchParen', s:gGray24, s:gPink1, 'none', s:cGray24, s:cPink1, 'none')
 
 hi! link Function       Normal
-" hi! link Character      String
-" hi! link Boolean        Constant
 hi! link Number         Constant
 hi! link Float          Constant
 hi! link Identifier     Special
 hi! link Keyword        Statement
-" hi! link Label          PreProc
 hi! link Exception      Statement
 hi! link Conditional    Statement
-" hi! link Operator       Statement
 "}}}
 
 "" User colours {{{
-hi User1        guifg=#5fafd7 guibg=#404040 gui=bold   ctermfg=74   ctermbg=237  cterm=bold  
-hi User2        guifg=#a5f1f1 guibg=#404040 gui=none   ctermfg=159  ctermbg=237  cterm=none  
-hi User3        guifg=#d7af5f guibg=#404040 gui=none   ctermfg=179  ctermbg=237  cterm=none  
-hi User4        guifg=#87af00 guibg=#404040 gui=none   ctermfg=106  ctermbg=237  cterm=none  
-hi User5        guifg=#af0000 guibg=#404040 gui=bold   ctermfg=124  ctermbg=237  cterm=bold  
-hi User6        guifg=#ff87d7 guibg=#404040 gui=none   ctermfg=212  ctermbg=237  cterm=bold  
-"hi User7        guifg=#eeeeee guibg=#404040 gui=italic ctermfg=255  ctermbg=237  cterm=italic
-"hi User8        guifg=#eeeeee guibg=#404040 gui=italic ctermfg=255  ctermbg=237  cterm=italic
-"hi User9        guifg=#eeeeee guibg=#404040 gui=italic ctermfg=255  ctermbg=237  cterm=italic
+call s:defHighlightGroup('User1', s:gBlue2, s:gGray6, 'bold', s:cBlue2, s:cGray6, 'bold')
+call s:defHighlightGroup('User2', s:gBlue3, s:gGray6, 'none', s:cBlue3, s:cGray6, 'none')
+call s:defHighlightGroup('User3', s:gOrange1, s:gGray6, 'none', s:cOrange1, s:cGray6, 'none')
+call s:defHighlightGroup('User4', s:gGreen2, s:gGray6, 'none', s:cGreen2, s:cGray6, 'none')
+call s:defHighlightGroup('User5', s:gRed1, s:gGray6, 'bold', s:cRed1, s:cGray6, 'bold')
+call s:defHighlightGroup('User6', s:gPink1, s:gGray6, 'none', s:cPink1, s:cGray6, 'bold')
+
+call s:defHighlightGroup('STBuffer', s:gWhite, s:gGray14, 'bold', s:cWhite, s:cGray14, 'bold')
+call s:defHighlightGroup('STGit', s:gBlue2, s:gGray10, 'bold', s:cBlue2, s:cGray10, 'bold')
+call s:defHighlightGroup('STFile', s:gGray23, s:gGray10, 'bold', s:cGray23, s:cGray10, 'bold')
+call s:defHighlightGroup('STFileTypes', s:gGray15, s:gGray8, 'none', s:cGray15, s:cGray8, 'none')
+call s:defHighlightGroup('STGreenFlags', s:gGreen2, s:gGray8, 'bold', s:cGreen2, s:cGray8, 'bold')
+call s:defHighlightGroup('STOrangeFlags', s:gOrange2, s:gGray8, 'bold', s:cOrange2, s:cGray8, 'bold')
+call s:defHighlightGroup('STRedFlags', s:gRed1, s:gGray8, 'bold', s:cRed1, s:cGray8, 'bold')
+call s:defHighlightGroup('STPositionLight', s:gGray20, s:gGray10, 'bold', s:cGray20, s:cGray10, 'bold')
+call s:defHighlightGroup('STPositionDark', s:gGray5, s:gGray10, 'none', s:cGray5, s:cGray10, 'none')
+call s:defHighlightGroup('STPositionPercentage', s:gGray24, s:gGray14, 'bold', s:cGray24, s:cGray14, 'bold')
 "}}}
 
 "" Diff mode {{{
-hi DiffAdd      guifg=NONE    guibg=#263526 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
-hi DiffChange   guifg=NONE    guibg=#262635 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
-hi DiffDelete   guifg=NONE    guibg=#352626 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
-hi DiffText     guifg=NONE    guibg=#353526 gui=none   ctermfg=NONE ctermbg=NONE cterm=none  
+call s:defHighlightGroup('DiffAdd', 'NONE', s:gGray4Green, 'none', 'NONE', 'NONE', 'none')
+call s:defHighlightGroup('DiffChange', 'NONE', s:gGray4Blue, 'none', 'NONE', 'NONE', 'none')
+call s:defHighlightGroup('DiffDelete', 'NONE', s:gGray4Red, 'none', 'NONE', 'NONE', 'none')
+call s:defHighlightGroup('DiffText', 'NONE', s:gGray4Yellow, 'none', 'NONE', 'NONE', 'none')
 "}}}
 
 "" Specific colours for Vim >= 7.0 {{{
 if version >= 700
-    hi CursorLine   guibg=#404040 ctermbg=237 cterm=none
+    call s:defHighlightGroup('CursorLine', 'NONE', s:gGray6, 'italic', 'NONE', s:cGray6, 'none')
     hi SpellBad     guisp=#af0000 ctermfg=124
 
     hi! link CursorColumn    CursorLine
@@ -106,49 +227,24 @@ endif
 "" Specific colours for various plugins {{{
 
 "" Specific colours for 'MiniBufExpl' {{{
-hi MBENormal                    guifg=#a8a8a8 guibg=NONE    gui=italic ctermfg=248  ctermbg=NONE cterm=none  
-hi MBEChanged                   guifg=#d75f5f guibg=NONE    gui=italic ctermfg=167  ctermbg=NONE cterm=none  
-hi MBEVisibleNormal             guifg=#eeeeee guibg=NONE    gui=NONE   ctermfg=255  ctermbg=NONE cterm=none  
-hi MBEVisibleChanged            guifg=#af0000 guibg=NONE    gui=NONE   ctermfg=124  ctermbg=NONE cterm=none  
-hi MBEVisibleActive             guifg=#ffffff guibg=NONE    gui=bold   ctermfg=15   ctermbg=NONE cterm=bold  
-hi MBEVisibleChangedActive      guifg=#d70000 guibg=NONE    gui=bold   ctermfg=160  ctermbg=NONE cterm=bold  
+call s:defHighlightGroup('MBENormal', s:gGray17, 'NONE', 'italic', s:cGray17, 'NONE', 'none')
+call s:defHighlightGroup('MBEChanged', s:gRed3, 'NONE', 'italic', s:cRed3, 'NONE', 'none')
+call s:defHighlightGroup('MBEVisibleNormal', s:gGray24, 'NONE', 'none', s:cGray24, 'NONE', 'none')
+call s:defHighlightGroup('MBEVisibleChanged', s:gRed1, 'NONE', 'none', s:cRed1, 'NONE', 'none')
+call s:defHighlightGroup('MBEVisibleActive', s:gWhite, 'NONE', 'bold', s:cWhite, 'NONE', 'bold')
+call s:defHighlightGroup('MBEVisibleChangedActive', s:gRed2, 'NONE', 'bold', s:cRed2, 'NONE', 'bold')
 "}}}
 
 "" Specific colours for 'CtrlP' {{{
-" CtrlP buffer {{{
-"hi CtrlPNoEntries    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPMatch        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPLinePre      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPPrtBase      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPPrtText      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPPrtCursor    guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"}}}
-
-" Statuslines {{{
-hi CtrlPMode1   guifg=#d7af5f guibg=#404040 gui=italic ctermfg=179  ctermbg=237  cterm=none  
-hi CtrlPMode2   guifg=#a5f1f1 guibg=#404040 gui=bold   ctermfg=159  ctermbg=237  cterm=none  
-" hi CtrlPStats   guifg=#eeeeee guibg=#404040 gui=none   ctermfg=255  ctermbg=237  cterm=none  
-"}}}
-
-" Extensions {{{
-"hi CtrlPTabExtra     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPBufName      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPTagKind      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPLineCol      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPUndoT        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPUndoBr       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPUndoNr       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPUndoSv       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPUndoPo       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi CtrlPBookmark     guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"}}}
+call s:defHighlightGroup('CtrlPMode1', s:gOrange1, s:gGray6, 'italic', s:cOrange1, s:cGray6, 'none')
+call s:defHighlightGroup('CtrlPMode2', s:gBlue3, s:gGray6, 'bold', s:cBlue3, s:cGray6, 'none')
 "}}}
 
 "" Specific colours for 'Tagbar' {{{
-hi TagbarScope                  guifg=#ffffff guibg=NONE    gui=bold   ctermfg=15   ctermbg=NONE cterm=bold  
-hi TagbarVisibilityPublic       guifg=#afd700 guibg=NONE    gui=bold   ctermfg=148  ctermbg=NONE cterm=bold  
-hi TagbarVisibilityProtected    guifg=#ffff5f guibg=NONE    gui=bold   ctermfg=227  ctermbg=NONE cterm=bold  
-hi TagbarVisibilityPrivate      guifg=#d70000 guibg=NONE    gui=bold   ctermfg=160  ctermbg=NONE cterm=bold  
+call s:defHighlightGroup('TagbarScope', s:gWhite, 'NONE', 'bold', s:cWhite, 'NONE', 'bold')
+call s:defHighlightGroup('TagbarVisibilityPublic', s:gGreen4, 'NONE', 'bold', s:cGreen4, 'NONE', 'bold')
+call s:defHighlightGroup('TagbarVisibilityProtected', s:gYellow2, 'NONE', 'bold', s:cYellow2, 'NONE', 'bold')
+call s:defHighlightGroup('TagbarVisibilityPrivate', s:gRed2, 'NONE', 'bold', s:cRed2, 'NONE', 'bold')
 
 hi! link TagbarComment      Comment
 hi! link TagbarKind         Statement
@@ -160,29 +256,12 @@ hi! link TagbarFoldIcon     Special
 hi! link TagbarHighlight    Search
 "}}}
 
-"" Specific colours for 'Undotree' {{{
-"hi! UndotreeNode             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeNodeCurrent      guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeTimeStamp        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeFirstNode        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeBranch           guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeSeq              guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeCurrent          guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeNext             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeHead             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeHelp             guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeHelpKey          guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeHelpTitle        guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeSavedSmall       guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"hi! UndotreeSavedBig         guifg=#eeeeee guibg=#ff87d7 gui=none   ctermfg=255  ctermbg=212  cterm=none  
-"}}}
-
 "" Specific colours for 'Gitgutter' {{{
 "" Symbols {{{
-hi GitGutterAdd                guifg=#005f00 guibg=#263526 gui=none   ctermfg=22   ctermbg=NONE cterm=bold  
-hi GitGutterChange             guifg=#005fff guibg=#262635 gui=none   ctermfg=27   ctermbg=NONE cterm=bold  
-hi GitGutterDelete             guifg=#af0000 guibg=#352626 gui=none   ctermfg=124  ctermbg=NONE cterm=bold  
-hi GitGutterChangeDelete       guifg=#ffaf00 guibg=#353526 gui=none   ctermfg=214  ctermbg=NONE cterm=bold  
+call s:defHighlightGroup('GitGutterAdd', s:gGreen1, s:gGray4Green, 'none', s:cGreen1, 'NONE', 'bold')
+call s:defHighlightGroup('GitGutterChange', s:gBlue1, s:gGray4Blue, 'none', s:cBlue1, 'NONE', 'bold')
+call s:defHighlightGroup('GitGutterDelete', s:gRed1, s:gGray4Red, 'none', s:cRed1, 'NONE', 'bold')
+call s:defHighlightGroup('GitGutterChangeDelete', s:gOrange2, s:gGray4Yellow, 'none', s:cOrange2, 'NONE', 'bold')
 "}}}
 
 "" Lines {{{
@@ -194,11 +273,12 @@ hi! link GitGutterChangeDeleteLine      DiffText
 "}}}
 
 "" Specific colours for 'Vim-Easytags' {{{
-hi cTypeTag     guifg=#d7af5f guibg=NONE    gui=none   ctermfg=179  ctermbg=NONE cterm=none  
-hi cPreProcTag  guifg=#a5f1f1 guibg=NONE    gui=none   ctermfg=159  ctermbg=NONE cterm=none  
-hi cFunctionTag guifg=#eeeeee guibg=#262626 gui=bold   ctermfg=255  ctermbg=235  cterm=bold  
+call s:defHighlightGroup('cTypeTag', s:gOrange1, 'NONE', 'none', s:cOrange1, 'NONE', 'none')
+call s:defHighlightGroup('cPreProcTag', s:gBlue3, 'NONE', 'none', s:cBlue3, 'NONE', 'none')
+call s:defHighlightGroup('cFunctionTag', s:gGray24, 'NONE', 'bold', s:cGray24, 'NONE', 'bold')
+
 hi! link cEnumTag Special
-" hi! link cMemberTag Special
+hi! link cMemberTag cTypeTag
 "}}}
 
 "" Specific colours for 'Rainbow' {{{
